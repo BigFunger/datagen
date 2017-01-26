@@ -1,0 +1,15 @@
+{
+  "author": "Jim Unger",
+  "name": "datagen",
+  "dependencies": {
+    "angular-sanitize": "1.5.7",
+    "boom": "2.8.0",
+    "joi": "6.6.1",
+    "jquery": "2.1.4",
+    "lodash": "3.10.1",
+    "node-uuid": "^1.4.7",
+    "ui-select": "0.19.6"
+  },
+  "version": "kibana",
+  "repository": "none"
+}

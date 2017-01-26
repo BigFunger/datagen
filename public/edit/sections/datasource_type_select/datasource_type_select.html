@@ -1,0 +1,19 @@
+<div class="form-group">
+  <label>Data Type:</label>
+  <ui-select
+    name="typeId"
+    ng-model="selectedItem.value"
+    datasource-type-select-tweaks
+    on-select="selected();">
+    <ui-select-match>
+      <span ng-bind="$select.selected.title"></span>
+    </ui-select-match>
+    <ui-select-choices
+      repeat="datasourceType in (datasourceTypes | filter: $select.search)">
+      <label ng-bind="datasourceType.title"></label>
+      <div class="help-text">
+        <span ng-bind="datasourceType.helpText"></span>
+      </div>
+    </ui-select-choices>
+  </ui-select>
+</div>
