@@ -12,27 +12,13 @@ export function generateData(callWithRequest, dataplan, server) {
 }
 
 function indexDocument(callWithRequest, dataplan, server) {
-  console.log('getting to indexDocument');
   const datasourceClasses = server.plugins.datagen.datasources.datasources;
-
-  console.log('**************************************');
-  console.log('data source classes');
-  console.log('**************************************');
-  console.log(datasourceClasses);
-
   const body = {};
   _.forEach(dataplan.datasources, (datasource) => {
-    console.log('**************************************');
-    console.log('datasource.typeId');
-    console.log('**************************************');
-    console.log(datasource.typeId);
-
     const GeneratorClass = datasourceClasses[datasource.typeId].class;
     const generator = new GeneratorClass(datasource);
     _.assign(body, generator.generate())
   });
-
-  console.log(JSON.stringify(body));
 
   return callWithRequest('index', {
     index: dataplan.indexName,

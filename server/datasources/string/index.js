@@ -1,6 +1,6 @@
 import { StringSource } from './string_source';
 
-export default function (server) {
+export function registerString (server) {
   const datagen = server.plugins.datagen;
 
   datagen.datasources.register({

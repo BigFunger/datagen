@@ -13,7 +13,7 @@ export class StringSource {
     if (datasource.method === 'values') {
       value = randomItem(datasource.values);
     } else {
-      const validChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      const validChar = datasource.charset;
       value = '';
       for (var i=0;i<datasource.length;i++) {
         value = value + validChar[_.random(0, validChar.length-1)];

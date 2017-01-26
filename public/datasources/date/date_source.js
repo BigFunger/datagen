@@ -1,19 +1,19 @@
 import { assign } from 'lodash';
 import { Datasource } from 'plugins/datagen/lib/datasource';
 
-export class StringSource extends Datasource {
+export class DateSource extends Datasource {
   constructor(model) {
     super(
-      'string',
-      'String',
-      `Defines a string field and how to generate its values`,
+      'date',
+      'Date',
+      `Defines a date field and how to generate its values`,
       'field',
       {
         field: '',
-        method: 'values',
-        length: 100,
-        values: [],
-        charset: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        method: 'now',
+        value: '',
+        startDate: '',
+        endDate: ''
       },
       model
     );
@@ -32,9 +32,9 @@ export class StringSource extends Datasource {
       {
         method: this.method,
         field: this.field || '',
-        length: this.length || 0,
-        values: this.values || [],
-        charset: this.charset || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        value: this.value || '',
+        startDate: this.startDate || '',
+        endDate: this.endDate || ''
       }
     );
   }
@@ -42,7 +42,7 @@ export class StringSource extends Datasource {
   get mapping() {
     const base = super.mapping;
     const extended = {
-      "type": "text"
+      "type": "date"
     };
     return assign(base, _.set({}, this.field, extended));
   }

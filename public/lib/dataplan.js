@@ -34,6 +34,10 @@ export class Dataplan {
     return result;
   }
 
+  get title() {
+    return `${this.numberOfDocuments} docs => '${this.indexName}.${this.typeName}'`;
+  }
+
   get mapping() {
     const result = {
       'mappings': {}
