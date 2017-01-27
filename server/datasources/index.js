@@ -1,7 +1,11 @@
 import { registerDate } from './date';
-import { registerString } from './string';
+import { registerNumber } from './number';
+import { registerKeyword } from './keyword';
+import { registerText } from './text';
 
 export function registerDatasources(server) {
   registerDate(server);
-  registerString(server);
+  registerNumber(server);
+  registerKeyword(server);
+  registerText(server);
 }

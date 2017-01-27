@@ -1,10 +1,10 @@
 import uiModules from 'ui/modules';
-import template from './string_source_ui.html';
-import './string_source_ui.less';
+import template from './keyword_source_ui.html';
+import './keyword_source_ui.less';
 
 const app = uiModules.get('data-gen');
 
-app.directive('stringSourceUi', function () {
+app.directive('keywordSourceUi', function () {
   return {
     restrict: 'E',
     template: template,

@@ -12,14 +12,14 @@ export function updateMapping(callWithRequest, dataplan) {
 }
 
 function changeMapping(callWithRequest, dataplan, mapping) {
-  console.log('**************************************************');
-  console.log('Change mapping')
-  console.log('**************************************************');
-  console.log(JSON.stringify(mapping));
-  console.log('**************************************************');
-  console.log(JSON.stringify(dataplan.mapping));
-  console.log('**************************************************');
-  console.log('');
+  // console.log('**************************************************');
+  // console.log('Change mapping')
+  // console.log('**************************************************');
+  // console.log(JSON.stringify(mapping));
+  // console.log('**************************************************');
+  // console.log(JSON.stringify(dataplan.mapping));
+  // console.log('**************************************************');
+  // console.log('');
 
   const typeMapping = _.get(dataplan.mapping, `mappings.${dataplan.typeName}`);
 

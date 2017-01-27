@@ -1,12 +1,12 @@
-import { assign } from 'lodash';
+import { assign, isEmpty } from 'lodash';
 import { Datasource } from 'plugins/datagen/lib/datasource';
 
-export class StringSource extends Datasource {
+export class KeywordSource extends Datasource {
   constructor(model) {
     super(
-      'string',
-      'String',
-      `Defines a string field and how to generate its values`,
+      'keyword',
+      'Keyword',
+      `Defines a keyword field and how to generate its values`,
       'field',
       {
         field: '',
@@ -42,7 +42,7 @@ export class StringSource extends Datasource {
   get mapping() {
     const base = super.mapping;
     const extended = {
-      "type": "text"
+      "type": "keyword"
     };
     return assign(base, _.set({}, this.field, extended));
   }

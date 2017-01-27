@@ -16,7 +16,7 @@ export default (server) => {
 
       return updateMapping(callWithRequest, dataplan)
       .then((mapping) => {
-        console.log(`mapping created. ${mapping}`)
+        // console.log(`mapping created. ${mapping}`)
         return generateData(callWithRequest, dataplan, server);
       })
       .then(reply)

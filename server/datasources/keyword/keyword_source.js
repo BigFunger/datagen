@@ -1,7 +1,7 @@
 import { randomItem } from '../../lib/random_item';
 import _ from 'lodash';
 
-export class StringSource {
+export class KeywordSource {
   constructor(datasource) {
     this.datasource = datasource;
   }

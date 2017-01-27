@@ -1,2 +1,4 @@
 import './date';
-import './string';
+import './number';
+import './keyword';
+import './text';
