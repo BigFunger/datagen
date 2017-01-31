@@ -4,8 +4,10 @@ export function updateMapping(callWithRequest, dataplan) {
   return loadMapping(callWithRequest, dataplan)
   .then((mapping) => {
     if (!mapping) {
+      console.log('CREATE MAPPING');
       return createMapping(callWithRequest, dataplan);
     } else {
+      console.log('CHANGE MAPPING');
       return changeMapping(callWithRequest, dataplan, mapping);
     }
   });

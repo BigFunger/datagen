@@ -9,7 +9,9 @@ app.directive('datasourcesNav', function () {
     restrict: 'E',
     template: template,
     controller: function ($scope) {
-      $scope.treeItems = [ $scope.dataplan ];
+      $scope.$watch('dataplan', () => {
+        $scope.treeItems = [ $scope.dataplan ];
+      });
     }
   };
 });

@@ -11,15 +11,17 @@ app.directive('datasources', function () {
     template: template,
     controllerAs: 'datasources',
     controller: function ($scope) {
-      this.dataplan = $scope.dataplan;
-      this.selectedItem = _.first(this.dataplan.datasourceCollection.datasourceShells);
-
       $scope.$watch('datasources.selectedItem', (selectedItem) => {
         if (selectedItem && selectedItem.constructor.name === 'DatasourceShell') {
           this.selectedDatasourceShell = selectedItem;
         } else {
           this.selectedDatasourceShell = undefined;
         }
+      });
+
+      $scope.$watch('dataplan', () => {
+        this.dataplan = $scope.dataplan;
+        this.selectedItem = _.first(this.dataplan.datasourceCollection.datasourceShells);
       });
     }
   };

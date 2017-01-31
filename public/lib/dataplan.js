@@ -19,6 +19,10 @@ export class Dataplan {
     this.datasourceRegistry = datasourceRegistry;
     this.datasourceCollection = new DatasourceCollection(this);
     this.datasourceCounters = {};
+
+    _.forEach(_.get(model, 'datasources'), datasourceModel => {
+      this.datasourceCollection.add(datasourceModel);
+    });
   }
 
   get model() {
