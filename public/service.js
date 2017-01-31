@@ -8,14 +8,14 @@ export function DatagenProvider($http, $q, Private) {
     .catch(err => {
       return $q.reject(new Error('Error generating data'));
     });
-  }
+  };
 
   this.save = (dataplan, dataplanId) => {
     return $http.post(`${apiPrefix}/save/${dataplanId}`, dataplan)
     .catch(err => {
       return $q.reject(new Error('Error saving datplan'));
     });
-  }
+  };
 
   this.load = (dataplanId) => {
     return $http.get(`${apiPrefix}/load/${dataplanId}`)
@@ -27,6 +27,16 @@ export function DatagenProvider($http, $q, Private) {
     .catch(err => {
       return $q.reject(new Error('Error loading dataplan'));
     });
-  }
+  };
+
+  this.init = () => {
+    return $http.post(`${apiPrefix}/init`)
+    .then(() => {
+      return true;
+    })
+    .catch(err => {
+      return $q.reject(new Error('Error initializing'));
+    });
+  };
 
 }

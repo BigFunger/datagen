@@ -1,11 +1,16 @@
 import routes from 'ui/routes';
 import { Dataplan } from 'plugins/datagen/lib/dataplan';
 import datasourceRegistryProvider from 'plugins/datagen/datasource_registry';
+import { DatagenProvider } from 'plugins/datagen/service';
 
 routes
 .when('/management/elasticsearch/datagen/', {
   template: '<datagen-edit></datagen-edit>',
   resolve: {
+    init: function(Private) {
+      const service = Private(DatagenProvider);
+      return service.init();
+    },
     dataplan: function (Private) {
       const datasourceRegistry = Private(datasourceRegistryProvider);
 
