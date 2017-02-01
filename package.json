@@ -11,5 +11,8 @@
     "ui-select": "0.19.6"
   },
   "version": "kibana",
-  "repository": "none"
+  "repository": "none",
+  "dependencies": {
+    "elasticsearch": "11.0.1"
+  }
 }
