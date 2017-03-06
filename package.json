@@ -1,6 +1,8 @@
 {
   "author": "Jim Unger",
   "name": "datagen",
+  "license": "Apache-2.0",
+  "description": "none",
   "dependencies": {
     "angular-sanitize": "1.5.7",
     "boom": "2.8.0",

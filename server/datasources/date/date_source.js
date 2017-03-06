@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import moment from 'moment';
 
 export class DateSource {
   constructor(datasource) {
@@ -25,6 +26,8 @@ export class DateSource {
       const range = endDate - startDate;
       value = startDate + _.random(range);
     }
+
+    value = moment(value).toISOString();
 
     return _.set({}, datasource.field, value);
   }

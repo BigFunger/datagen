@@ -16,7 +16,7 @@ app.directive('datagenEdit', function () {
   return {
     restrict: 'E',
     template: template,
-    controller: function ($scope, $route, Private) {
+    controller: function ($scope, $route, Private, kbnUrl) {
       $scope.notifier = new Notifier({ location: 'Datagen' });
       $scope.dataplan = $route.current.locals.dataplan;
       const datasourceRegistry = Private(datasourceRegistryProvider);

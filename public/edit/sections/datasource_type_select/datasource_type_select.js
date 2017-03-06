@@ -53,9 +53,9 @@ app.directive('datasourceTypeSelect', function ($timeout, Private, Notifier) {
         if (!typeId) {
           $scope.selectedItem = { value: '' };
 
-          $timeout(() => {
-            $el.find('.ui-select-focusser')[0].focus();
-          });
+          // $timeout(() => {
+          //   $el.find('.ui-select-focusser')[0].focus();
+          // });
         } else {
           const datasourceType = datasourceTypesById[typeId];
           $scope.selectedItem = { value: datasourceType };

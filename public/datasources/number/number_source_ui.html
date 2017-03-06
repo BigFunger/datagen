@@ -8,12 +8,12 @@
     input-focus
     id="field"
     name="field"
-    required pattern="[a-zA-Z_][a-zA-Z0-9_@\-\$\.]*"
+    required pattern="[a-zA-Z0-9_@\-\$\.]*"
     required>
   <div
     class="kuiInputNote kuiInputNote--danger"
     ng-show="datasourceForm.field.$error.pattern">
-    Watch Id must begin with a letter or underscore and contain only letters, underscores, dashes, and numbers.
+    Field Name must contain only letters, underscores, dashes, and numbers.
   </div>
   <div
     class="kuiInputNote kuiInputNote--danger"
