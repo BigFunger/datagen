@@ -3,6 +3,10 @@
   "name": "datagen",
   "license": "Apache-2.0",
   "description": "none",
+  "scripts": {
+    "start": "plugin-helpers start",
+    "build": "plugin-helpers build"
+  },
   "dependencies": {
     "angular": "1.4.7",
     "angular-sanitize": "1.4.9",
