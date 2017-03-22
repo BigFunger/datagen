@@ -25,6 +25,7 @@
     "url": "https://github.com/BigFunger/datagen.git"
   },
   "devDependencies": {
+    "@elastic/plugin-helpers": "~6.0.2",
     "expect.js": "0.3.1"
   }
 }
