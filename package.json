@@ -4,8 +4,10 @@
   "license": "Apache-2.0",
   "description": "none",
   "dependencies": {
+    "duration-parser": "^1.0.2",
     "elasticsearch": "11.0.1",
-    "gaussian": "^1.1.0"
+    "gaussian": "^1.1.0",
+    "lodash": "^3.10.1"
   },
   "version": "kibana",
   "repository": "none"
