@@ -4,9 +4,27 @@
   "license": "Apache-2.0",
   "description": "none",
   "dependencies": {
+    "angular": "1.4.7",
+    "angular-sanitize": "1.4.9",
+    "duration-parser": "1.0.2",
     "elasticsearch": "11.0.1",
-    "gaussian": "^1.1.0"
+    "gaussian": "1.1.0",
+    "joi": "6.10.1",
+    "jquery": "2.1.4",
+    "lodash": "3.10.1",
+    "moment": "2.11.2",
+    "node-uuid": "1.4.7",
+    "ui-select": "0.19.4"
   },
-  "version": "kibana",
-  "repository": "none"
+  "kibana": {
+    "version": "6.0.0"
+  },
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigFunger/datagen.git"
+  },
+  "devDependencies": {
+    "expect.js": "0.3.1"
+  }
 }
