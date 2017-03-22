@@ -1,9 +1,8 @@
-<div class="form-group">
+<!-- <div class="form-group">
   <label>Data Type:</label>
   <ui-select
     name="typeId"
     ng-model="selectedItem.value"
-    datasource-type-select-tweaks
     on-select="selected();">
     <ui-select-match>
       <span ng-bind="$select.selected.title"></span>
@@ -16,4 +15,14 @@
       </div>
     </ui-select-choices>
   </ui-select>
+</div> -->
+
+<div class="form-group">
+  <label>Data Type:</label>
+  <div>
+    <select
+      ng-model="typeId"
+      ng-options="datasourceType.typeId as datasourceType.title for datasourceType in datasourceTypes"
+    ></select>
+  </div>
 </div>

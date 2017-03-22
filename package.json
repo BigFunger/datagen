@@ -1,18 +1,12 @@
 {
   "author": "Jim Unger",
   "name": "datagen",
+  "license": "Apache-2.0",
+  "description": "none",
   "dependencies": {
-    "angular-sanitize": "1.5.7",
-    "boom": "2.8.0",
-    "joi": "6.6.1",
-    "jquery": "2.1.4",
-    "lodash": "3.10.1",
-    "node-uuid": "^1.4.7",
-    "ui-select": "0.19.6"
+    "elasticsearch": "11.0.1",
+    "gaussian": "^1.1.0"
   },
   "version": "kibana",
-  "repository": "none",
-  "dependencies": {
-    "elasticsearch": "11.0.1"
-  }
+  "repository": "none"
 }
