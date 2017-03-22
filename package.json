@@ -16,7 +16,10 @@
     "node-uuid": "1.4.7",
     "ui-select": "0.19.4"
   },
-  "version": "kibana",
+  "kibana": {
+    "version": "6.0.0"
+  },
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/BigFunger/datagen.git"
