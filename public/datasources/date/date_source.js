@@ -1,5 +1,14 @@
 import { assign } from 'lodash';
 import { Datasource } from 'plugins/datagen/lib/datasource';
+import parseDuration from 'duration-parser';
+
+function getDuration(durationText) {
+  try {
+    return parseDuration(durationText);
+  } catch(err) {
+    return 0;
+  };
+}
 
 export class DateSource extends Datasource {
   constructor(model) {
@@ -13,7 +22,11 @@ export class DateSource extends Datasource {
         method: 'now',
         value: '',
         startDate: '',
-        endDate: ''
+        endDate: '',
+        applyNormalDistribution: false,
+        initialOffset: '',
+        distributionWindow: '',
+        distributionOffset: ''
       },
       model
     );
@@ -34,7 +47,11 @@ export class DateSource extends Datasource {
         field: this.field || '',
         value: this.value || '',
         startDate: this.startDate || '',
-        endDate: this.endDate || ''
+        endDate: this.endDate || '',
+        applyNormalDistribution: this.applyNormalDistribution,
+        initialOffset: getDuration(this.initialOffset),
+        distributionWindow: getDuration(this.distributionWindow),
+        distributionOffset: getDuration(this.distributionOffset)
       }
     );
   }
