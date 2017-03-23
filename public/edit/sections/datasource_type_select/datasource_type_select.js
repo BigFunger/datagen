@@ -3,7 +3,6 @@ import uiModules from 'ui/modules';
 import template from './datasource_type_select.html';
 import datasourceRegistryProvider from 'plugins/datagen/datasource_registry';
 import './datasource_type_select.less';
-import 'ui-select';
 
 const app = uiModules.get('datagen');
 

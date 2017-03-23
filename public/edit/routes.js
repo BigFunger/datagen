@@ -7,11 +7,11 @@ routes
 .when('/management/elasticsearch/datagen/', {
   template: '<datagen-edit></datagen-edit>',
   resolve: {
-    init: function(Private) {
+    init: (Private) => {
       const service = Private(DatagenProvider);
       return service.init();
     },
-    dataplan: function (Private) {
+    dataplan: (Private) => {
       const datasourceRegistry = Private(datasourceRegistryProvider);
 
       const dataplan = new Dataplan(datasourceRegistry);

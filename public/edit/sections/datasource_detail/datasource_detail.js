@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import angular from 'angular';
+import $ from 'jquery';
 import uiModules from 'ui/modules';
 import template from './datasource_detail.html';
 import './datasource_detail.less';
@@ -32,7 +32,7 @@ app.directive('datasourceDetail', function ($compile, $timeout) {
 
         if (typeId) {
           const template = `<${typeId}-source-ui></${typeId}-source-ui>`;
-          const $innerEl = angular.element(template);
+          const $innerEl = $(template);
           const postLink = $compile($innerEl);
           $container.append($innerEl);
           postLink(newScope);

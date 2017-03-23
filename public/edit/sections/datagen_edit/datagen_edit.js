@@ -6,8 +6,8 @@ import loadTemplate from './load_partial.html';
 import saveTemplate from './save_partial.html';
 import { DatagenProvider } from 'plugins/datagen/service';
 import './datagen_edit.less';
-import '../load_select';
 import datasourceRegistryProvider from 'plugins/datagen/datasource_registry';
+import angular from 'angular';
 import { Dataplan } from 'plugins/datagen/lib/dataplan';
 
 const app = uiModules.get('datagen');
@@ -16,7 +16,7 @@ app.directive('datagenEdit', function () {
   return {
     restrict: 'E',
     template: template,
-    controller: function ($scope, $route, Private, kbnUrl) {
+    controller: function ($scope, $route, Private) {
       $scope.notifier = new Notifier({ location: 'Datagen' });
       $scope.dataplan = $route.current.locals.dataplan;
       const datasourceRegistry = Private(datasourceRegistryProvider);
