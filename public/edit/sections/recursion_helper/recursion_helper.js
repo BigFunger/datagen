@@ -1,5 +1,5 @@
 import uiModules from 'ui/modules';
-import angular from 'angular';
+import { isFunction } from 'lodash';
 
 const app = uiModules.get('datagen');
 
@@ -13,7 +13,7 @@ app.factory('RecursionHelper', function ($compile) {
      */
     compile: function (element, link) {
       // Normalize the link parameter
-      if (angular.isFunction(link)) {
+      if (isFunction(link)) {
         link = { post: link };
       }
 

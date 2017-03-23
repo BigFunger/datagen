@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import uiModules from 'ui/modules';
 import template from './dataplan_tree_item.html';
-import '../recursion_helper/recursion_helper';
 import './dataplan_tree_item.less';
 
 const app = uiModules.get('pipelines');

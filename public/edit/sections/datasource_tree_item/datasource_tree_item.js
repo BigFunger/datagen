@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import uiModules from 'ui/modules';
 import template from './datasource_tree_item.html';
-import '../recursion_helper';
 import './datasource_tree_item.less';
 
 const app = uiModules.get('datagen');

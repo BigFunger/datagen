@@ -11,3 +11,4 @@ import './sections/datasource_detail';
 import './sections/datasources_detail';
 import './sections/dataplan_detail';
 import './sections/datagen_list_textarea';
+import './sections/recursion_helper';
