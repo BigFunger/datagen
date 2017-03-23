@@ -3,6 +3,10 @@
   "name": "datagen",
   "license": "Apache-2.0",
   "description": "none",
+  "scripts": {
+    "start": "plugin-helpers start",
+    "build": "plugin-helpers build"
+  },
   "dependencies": {
     "angular": "1.4.7",
     "angular-sanitize": "1.4.9",
@@ -17,7 +21,7 @@
     "ui-select": "0.19.4"
   },
   "kibana": {
-    "version": "6.0.0"
+    "version": "kibana"
   },
   "version": "0.0.1",
   "repository": {
@@ -25,6 +29,7 @@
     "url": "https://github.com/BigFunger/datagen.git"
   },
   "devDependencies": {
+    "@elastic/plugin-helpers": "~6.0.2",
     "expect.js": "0.3.1"
   }
 }
